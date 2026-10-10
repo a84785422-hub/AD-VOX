@@ -41,7 +41,8 @@ jobs:
             IS_MIDI_EFFECT FALSE
             COPY_PLUGIN_AFTER_BUILD FALSE
           )
-
+          juce_generate_juce_header(AD_VOX)
+          
           target_sources(AD_VOX PRIVATE
             Source/PluginProcessor.cpp
             Source/PluginProcessor.h
