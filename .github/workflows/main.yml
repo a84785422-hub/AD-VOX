@@ -34,6 +34,7 @@ jobs:
             PLUGIN_MANUFACTURER_CODE ADAu
             PLUGIN_CODE AdVx
             FORMATS VST3
+            VST3_CAN_REPLACE_VST2 FALSE
             PRODUCT_NAME "AD VOX"
             IS_SYNTH FALSE
             NEEDS_MIDI_INPUT FALSE
