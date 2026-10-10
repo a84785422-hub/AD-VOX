@@ -25,7 +25,7 @@ jobs:
         run: |
           @'
           cmake_minimum_required(VERSION 3.22)
-          project(AD_VOX VERSION 0.1.0 LANGUAGES CXX)
+          project(AD_VOX VERSION 0.1.0 LANGUAGES C CXX)
           add_subdirectory(JUCE)
 
           juce_add_plugin(AD_VOX
