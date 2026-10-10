@@ -1,0 +1,90 @@
+name: Build AD VOX VST3 (Windows)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout AD VOX
+        uses: actions/checkout@v4
+
+      - name: Checkout JUCE
+        uses: actions/checkout@v4
+        with:
+          repository: juce-framework/JUCE
+          path: JUCE
+          submodules: recursive
+
+      - name: Create CMake configuration
+        shell: pwsh
+        run: |
+          @'
+          cmake_minimum_required(VERSION 3.22)
+          project(AD_VOX VERSION 0.1.0 LANGUAGES CXX)
+          add_subdirectory(JUCE)
+
+          juce_add_plugin(AD_VOX
+            COMPANY_NAME "AD Audio"
+            BUNDLE_ID "com.adaudio.advox"
+            PLUGIN_MANUFACTURER_CODE ADAu
+            PLUGIN_CODE AdVx
+            FORMATS VST3
+            PRODUCT_NAME "AD VOX"
+            IS_SYNTH FALSE
+            NEEDS_MIDI_INPUT FALSE
+            NEEDS_MIDI_OUTPUT FALSE
+            IS_MIDI_EFFECT FALSE
+            COPY_PLUGIN_AFTER_BUILD FALSE
+          )
+
+          target_sources(AD_VOX PRIVATE
+            Source/PluginProcessor.cpp
+            Source/PluginProcessor.h
+            Source/PluginEditor.cpp
+            Source/PluginEditor.h
+          )
+
+          target_compile_features(AD_VOX PRIVATE cxx_std_17)
+          target_compile_definitions(AD_VOX PUBLIC
+            JUCE_WEB_BROWSER=0
+            JUCE_USE_CURL=0
+          )
+
+          target_link_libraries(AD_VOX PRIVATE
+            juce::juce_audio_utils
+            juce::juce_dsp
+            juce::juce_audio_processors
+            juce::juce_gui_extra
+            juce::juce_recommended_config_flags
+          )
+          '@ | Set-Content -Encoding utf8 CMakeLists.txt
+
+      - name: Configure
+        run: cmake -S . -B build -A x64
+
+      - name: Build VST3
+        run: cmake --build build --config Release --target AD_VOX_VST3 --parallel
+
+      - name: Package plugin
+        shell: pwsh
+        run: |
+          $plugin = Get-ChildItem build -Filter "AD VOX.vst3" -Recurse -Directory |
+            Select-Object -First 1
+          if (-not $plugin) {
+            throw "AD VOX.vst3 bundle not found"
+          }
+          New-Item -ItemType Directory -Force dist | Out-Null
+          Copy-Item $plugin.FullName "dist/AD VOX.vst3" -Recurse -Force
+          Compress-Archive "dist/AD VOX.vst3" "AD_VOX_Windows_VST3.zip" -Force
+
+      - name: Upload compiled VST3
+        uses: actions/upload-artifact@v4
+        with:
+          name: AD_VOX-Windows-VST3
+          path: AD_VOX_Windows_VST3.zip
+          if-no-files-found: error
