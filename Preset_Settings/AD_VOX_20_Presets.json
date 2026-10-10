@@ -1,0 +1,227 @@
+{
+  "name": "AD VOX",
+  "tempo_bpm": 155,
+  "important_note": "A standard MIDI file stores notes, timing and velocities; it does not store the plugin's EQ/reverb settings. Apply the matching settings in AD VOX or use the JSON as a reference.",
+  "presets": [
+    {
+      "number": 1,
+      "name": "Neon Tight",
+      "midi_file": "AD_VOX_01_Neon_Tight.mid",
+      "eq_low_db": 0,
+      "eq_mid_db": 1,
+      "eq_high_db": 2,
+      "reverb_wet_percent": 12,
+      "reverb_decay_seconds": 1.2,
+      "output_gain": 1
+    },
+    {
+      "number": 2,
+      "name": "Bright Bite",
+      "midi_file": "AD_VOX_02_Bright_Bite.mid",
+      "eq_low_db": -2,
+      "eq_mid_db": 2,
+      "eq_high_db": 4,
+      "reverb_wet_percent": 18,
+      "reverb_decay_seconds": 1.8,
+      "output_gain": 1
+    },
+    {
+      "number": 3,
+      "name": "Warm Bounce",
+      "midi_file": "AD_VOX_03_Warm_Bounce.mid",
+      "eq_low_db": 2,
+      "eq_mid_db": 0,
+      "eq_high_db": 1,
+      "reverb_wet_percent": 10,
+      "reverb_decay_seconds": 1,
+      "output_gain": 1
+    },
+    {
+      "number": 4,
+      "name": "Hyper Air",
+      "midi_file": "AD_VOX_04_Hyper_Air.mid",
+      "eq_low_db": -3,
+      "eq_mid_db": 1,
+      "eq_high_db": 5,
+      "reverb_wet_percent": 24,
+      "reverb_decay_seconds": 2.4,
+      "output_gain": 0.95
+    },
+    {
+      "number": 5,
+      "name": "Dream Wash",
+      "midi_file": "AD_VOX_05_Dream_Wash.mid",
+      "eq_low_db": 0,
+      "eq_mid_db": -2,
+      "eq_high_db": 3,
+      "reverb_wet_percent": 30,
+      "reverb_decay_seconds": 3,
+      "output_gain": 0.95
+    },
+    {
+      "number": 6,
+      "name": "Clean Snap",
+      "midi_file": "AD_VOX_06_Clean_Snap.mid",
+      "eq_low_db": 1,
+      "eq_mid_db": 2,
+      "eq_high_db": 2,
+      "reverb_wet_percent": 15,
+      "reverb_decay_seconds": 1.4,
+      "output_gain": 1
+    },
+    {
+      "number": 7,
+      "name": "Razor Chop",
+      "midi_file": "AD_VOX_07_Razor_Chop.mid",
+      "eq_low_db": -1,
+      "eq_mid_db": 3,
+      "eq_high_db": 5,
+      "reverb_wet_percent": 20,
+      "reverb_decay_seconds": 1.8,
+      "output_gain": 0.95
+    },
+    {
+      "number": 8,
+      "name": "Wide Space",
+      "midi_file": "AD_VOX_08_Wide_Space.mid",
+      "eq_low_db": 2,
+      "eq_mid_db": -1,
+      "eq_high_db": 4,
+      "reverb_wet_percent": 28,
+      "reverb_decay_seconds": 2.8,
+      "output_gain": 0.95
+    },
+    {
+      "number": 9,
+      "name": "Mid Punch",
+      "midi_file": "AD_VOX_09_Mid_Punch.mid",
+      "eq_low_db": -2,
+      "eq_mid_db": 4,
+      "eq_high_db": 3,
+      "reverb_wet_percent": 16,
+      "reverb_decay_seconds": 1.5,
+      "output_gain": 1
+    },
+    {
+      "number": 10,
+      "name": "Glass Vox",
+      "midi_file": "AD_VOX_10_Glass_Vox.mid",
+      "eq_low_db": 1,
+      "eq_mid_db": 1,
+      "eq_high_db": 6,
+      "reverb_wet_percent": 22,
+      "reverb_decay_seconds": 2,
+      "output_gain": 0.9
+    },
+    {
+      "number": 11,
+      "name": "Haze Tail",
+      "midi_file": "AD_VOX_11_Haze_Tail.mid",
+      "eq_low_db": 0,
+      "eq_mid_db": -3,
+      "eq_high_db": 5,
+      "reverb_wet_percent": 35,
+      "reverb_decay_seconds": 3.6,
+      "output_gain": 0.9
+    },
+    {
+      "number": 12,
+      "name": "Body Pop",
+      "midi_file": "AD_VOX_12_Body_Pop.mid",
+      "eq_low_db": 3,
+      "eq_mid_db": 0,
+      "eq_high_db": 2,
+      "reverb_wet_percent": 14,
+      "reverb_decay_seconds": 1.3,
+      "output_gain": 1
+    },
+    {
+      "number": 13,
+      "name": "Cyber Shine",
+      "midi_file": "AD_VOX_13_Cyber_Shine.mid",
+      "eq_low_db": -4,
+      "eq_mid_db": 2,
+      "eq_high_db": 6,
+      "reverb_wet_percent": 25,
+      "reverb_decay_seconds": 2.2,
+      "output_gain": 0.9
+    },
+    {
+      "number": 14,
+      "name": "Vocal Drive",
+      "midi_file": "AD_VOX_14_Vocal_Drive.mid",
+      "eq_low_db": 1,
+      "eq_mid_db": 4,
+      "eq_high_db": 4,
+      "reverb_wet_percent": 18,
+      "reverb_decay_seconds": 1.6,
+      "output_gain": 0.95
+    },
+    {
+      "number": 15,
+      "name": "Crystal Hall",
+      "midi_file": "AD_VOX_15_Crystal_Hall.mid",
+      "eq_low_db": -1,
+      "eq_mid_db": 0,
+      "eq_high_db": 7,
+      "reverb_wet_percent": 32,
+      "reverb_decay_seconds": 3.2,
+      "output_gain": 0.9
+    },
+    {
+      "number": 16,
+      "name": "Neon Stack",
+      "midi_file": "AD_VOX_16_Neon_Stack.mid",
+      "eq_low_db": 2,
+      "eq_mid_db": 2,
+      "eq_high_db": 5,
+      "reverb_wet_percent": 20,
+      "reverb_decay_seconds": 1.9,
+      "output_gain": 0.95
+    },
+    {
+      "number": 17,
+      "name": "Deep Echo",
+      "midi_file": "AD_VOX_17_Deep_Echo.mid",
+      "eq_low_db": -3,
+      "eq_mid_db": -1,
+      "eq_high_db": 4,
+      "reverb_wet_percent": 38,
+      "reverb_decay_seconds": 4.2,
+      "output_gain": 0.9
+    },
+    {
+      "number": 18,
+      "name": "Ultra Air",
+      "midi_file": "AD_VOX_18_Ultra_Air.mid",
+      "eq_low_db": 0,
+      "eq_mid_db": 3,
+      "eq_high_db": 6,
+      "reverb_wet_percent": 26,
+      "reverb_decay_seconds": 2.5,
+      "output_gain": 0.9
+    },
+    {
+      "number": 19,
+      "name": "Dry Bounce",
+      "midi_file": "AD_VOX_19_Dry_Bounce.mid",
+      "eq_low_db": 2,
+      "eq_mid_db": -2,
+      "eq_high_db": 3,
+      "reverb_wet_percent": 16,
+      "reverb_decay_seconds": 1.4,
+      "output_gain": 1
+    },
+    {
+      "number": 20,
+      "name": "Purple Storm",
+      "midi_file": "AD_VOX_20_Purple_Storm.mid",
+      "eq_low_db": -2,
+      "eq_mid_db": 3,
+      "eq_high_db": 7,
+      "reverb_wet_percent": 30,
+      "reverb_decay_seconds": 3,
+      "output_gain": 0.9
+    }
+  ]
+}
